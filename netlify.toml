@@ -6,3 +6,4 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  conditions = { NOT = [{Query = ["_next/static/*", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.css", "*.js", "*.svg"]}] }
