@@ -35,9 +35,9 @@ export default function PlansSection() {
 
               {/* Price */}
               <div className="mb-6">
-                <span className="text-6xl font-bold text-gray-900">₡29,900</span>
-                <span className="text-gray-600 ml-2">/año</span>
-                <p className="text-sm text-gray-500 mt-2">+ IVA</p>
+                <span className="text-6xl font-bold text-gray-900">₡3,500</span>
+                <span className="text-gray-600 ml-2">/mes</span>
+                <p className="text-sm text-gray-500 mt-2">IVA incluido</p>
               </div>
 
               {/* CTA Button */}
