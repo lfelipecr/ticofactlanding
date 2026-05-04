@@ -28,7 +28,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="/manus-storage/factico-logo_78bf5c26.webp"
+            src="/logo.png"
             alt="Factico.net"
             className="h-10 w-auto"
           />
