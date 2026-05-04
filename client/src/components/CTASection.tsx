@@ -27,7 +27,7 @@ export default function CTASection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="https://login.factico.net/" target="_blank" rel="noopener noreferrer">
+            <a href="/signup">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-lg font-semibold flex items-center gap-2 justify-center">
                 Registrarse Gratis
                 <ArrowRight className="w-5 h-5" />
