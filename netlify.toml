@@ -2,8 +2,9 @@
   command = "pnpm run build"
   publish = "dist/public"
 
+# Redirect all non-file requests to index.html for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  conditions = { NOT = [{Query = ["_next/static/*", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.css", "*.js", "*.svg"]}] }
+  force = false
