@@ -27,16 +27,20 @@ export default function CTASection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-lg font-semibold flex items-center gap-2 justify-center">
-              Registrarse Gratis
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-blue-600 px-8 py-6 text-lg rounded-lg font-semibold"
-            >
-              Contactar Ventas
-            </Button>
+            <a href="https://login.factico.net/" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-lg font-semibold flex items-center gap-2 justify-center">
+                Registrarse Gratis
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
+            <a href="mailto:info@factico.net">
+              <Button
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-blue-600 px-8 py-6 text-lg rounded-lg font-semibold"
+              >
+                Contactar Ventas
+              </Button>
+            </a>
           </div>
 
           {/* Trust Badges */}

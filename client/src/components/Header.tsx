@@ -64,9 +64,11 @@ export default function Header() {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex gap-3">
-          <Button className="bg-blue-600 hover:bg-blue-700">
-            Acceder
-          </Button>
+          <a href="https://login.factico.net/" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              Acceder
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -111,9 +113,11 @@ export default function Header() {
               Contacto
             </button>
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-100">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Acceder
-              </Button>
+              <a href="https://login.factico.net/" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  Acceder
+                </Button>
+              </a>
             </div>
           </nav>
         </div>
