@@ -19,20 +19,20 @@ export default function HeroSection() {
           {/* Contenido Izquierdo */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full">
-              <CheckCircle2 className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-medium text-green-700">
-                Certificado Resolución 4.4
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+              <CheckCircle2 className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-medium text-blue-700">
+                En el mercado desde 2017
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Facturación Electrónica Simple y Segura
+                Factura Electrónica Fácil para Costa Rica
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Emite facturas electrónicas conformes con el Ministerio de Hacienda desde cualquier dispositivo. Sin instalaciones. Sin complicaciones.
+                Factico.net es la solución más sencilla para emitir facturas electrónicas conformes con el Ministerio de Hacienda. Desde cualquier dispositivo, sin complicaciones.
               </p>
             </div>
 
@@ -75,12 +75,12 @@ export default function HeroSection() {
             {/* Estadísticas */}
             <div className="flex gap-8 pt-8 border-t border-gray-200">
               <div>
-                <p className="text-3xl font-bold text-blue-600">11+</p>
+                <p className="text-3xl font-bold text-blue-600">7+</p>
                 <p className="text-sm text-gray-600">Años de experiencia</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-blue-600">1000+</p>
-                <p className="text-sm text-gray-600">Clientes activos</p>
+                <p className="text-3xl font-bold text-blue-600">100+</p>
+                <p className="text-sm text-gray-600">Clientes satisfechos</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-blue-600">100%</p>

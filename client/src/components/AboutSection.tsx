@@ -21,7 +21,7 @@ export default function AboutSection() {
                 Confianza y Experiencia
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Con más de 11 años en el mercado costarricense, hemos ayudado a miles de empresas y trabajadores independientes a cumplir con sus obligaciones fiscales de forma segura y eficiente.
+                Desde 2017, Factico.net ha ayudado a más de 100 empresas y trabajadores independientes en Costa Rica a cumplir con sus obligaciones de facturación electrónica de forma segura y eficiente.
               </p>
             </div>
 
@@ -32,9 +32,9 @@ export default function AboutSection() {
                   <Award className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Certificado y Validado</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Cumplimiento Legal Garantizado</h3>
                   <p className="text-gray-600">
-                    Validado por GS1 Costa Rica. Cumple 100% con la Resolución 4.4 del Ministerio de Hacienda.
+                    Cumple 100% con la Resolución 4.4 del Ministerio de Hacienda. Tus facturas siempre estarán conformes.
                   </p>
                 </div>
               </div>
@@ -65,10 +65,10 @@ export default function AboutSection() {
             </div>
 
             {/* Misión y Visión */}
-            <div className="bg-white rounded-lg p-6 border border-gray-200">
+            <div className="bg-white rounded-lg p-8 border border-gray-200">
               <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Nuestro Compromiso</h4>
               <p className="text-gray-700 leading-relaxed">
-                Generar soluciones tecnológicas eficientes, confiables y seguras que agreguen valor a tu negocio. Buscamos ser tu mejor aliado en facturación electrónica.
+                Proporcionar la solución más simple y confiable para facturación electrónica en Costa Rica. Tu éxito es nuestro éxito.
               </p>
             </div>
           </div>
@@ -76,12 +76,12 @@ export default function AboutSection() {
           {/* Lado Derecho - Estadísticas */}
           <div className="space-y-8">
             <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <p className="text-5xl font-bold text-blue-600 mb-2">11+</p>
+              <p className="text-5xl font-bold text-blue-600 mb-2">7+</p>
               <p className="text-gray-600 text-lg">Años de experiencia en el mercado</p>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <p className="text-5xl font-bold text-blue-600 mb-2">1000+</p>
+              <p className="text-5xl font-bold text-blue-600 mb-2">100+</p>
               <p className="text-gray-600 text-lg">Clientes activos y satisfechos</p>
             </div>
 
@@ -91,12 +91,12 @@ export default function AboutSection() {
             </div>
 
             <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg p-8 text-white">
-              <h4 className="text-lg font-bold mb-4">Certificado Resolución 4.4</h4>
+              <h4 className="text-lg font-bold mb-4">Conformidad con Hacienda</h4>
               <p className="text-blue-100 mb-6">
-                Nuestro sistema ha sido validado por GS1 Costa Rica, cumpliendo al 100% con la normativa del Ministerio de Hacienda.
+                Nuestro sistema cumple 100% con la Resolución 4.4 del Ministerio de Hacienda. Todas tus facturas serán válidas y aceptadas.
               </p>
               <div className="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-medium">
-                ✓ Validado y Certificado
+                ✓ Conformidad Garantizada
               </div>
             </div>
           </div>

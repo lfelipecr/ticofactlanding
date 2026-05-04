@@ -26,14 +26,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">FE</span>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold text-gray-900">Factura CR</h1>
-            <p className="text-xs text-gray-500">Electrónica</p>
-          </div>
+        <div className="flex items-center gap-3">
+          <img
+            src="/manus-storage/factico-logo_78bf5c26.webp"
+            alt="Factico.net"
+            className="h-10 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -66,11 +64,8 @@ export default function Header() {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex gap-3">
-          <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-            Iniciar Sesión
-          </Button>
           <Button className="bg-blue-600 hover:bg-blue-700">
-            Registrarse
+            Acceder
           </Button>
         </div>
 
@@ -116,11 +111,8 @@ export default function Header() {
               Contacto
             </button>
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-100">
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600">
-                Iniciar Sesión
-              </Button>
               <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                Registrarse
+                Acceder
               </Button>
             </div>
           </nav>

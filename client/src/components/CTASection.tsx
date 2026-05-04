@@ -21,7 +21,7 @@ export default function CTASection() {
               Comienza tu Facturación Electrónica Hoy
             </h2>
             <p className="text-xl text-blue-100">
-              Únete a más de 1000 empresas y trabajadores independientes que confían en nosotros para su facturación electrónica.
+              Únete a más de 100 empresas y trabajadores independientes en Costa Rica que confían en Factico.net.
             </p>
           </div>
 
@@ -42,13 +42,13 @@ export default function CTASection() {
           {/* Trust Badges */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-8 border-t border-blue-500">
             <div className="text-center">
-              <p className="text-blue-100 text-sm">✓ Certificado Resolución 4.4</p>
+              <p className="text-blue-100 text-sm">✓ Conforme con Hacienda</p>
             </div>
             <div className="text-center">
-              <p className="text-blue-100 text-sm">✓ Soporte 24/7</p>
+              <p className="text-blue-100 text-sm">✓ Desde 2017</p>
             </div>
             <div className="text-center">
-              <p className="text-blue-100 text-sm">✓ Sin contrato de permanencia</p>
+              <p className="text-blue-100 text-sm">✓ 100+ clientes satisfechos</p>
             </div>
           </div>
         </div>

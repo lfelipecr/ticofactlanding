@@ -17,17 +17,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-gray-800">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">FE</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-white">Factura CR</h3>
-                <p className="text-xs text-gray-400">Electrónica</p>
-              </div>
-            </div>
+            <h3 className="font-bold text-white text-lg">Factico.net</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Solución profesional de factura electrónica para Costa Rica con cumplimiento normativo garantizado.
+              La solución más simple para factura electrónica en Costa Rica. Desde 2017 ayudando a empresas y trabajadores independientes.
             </p>
           </div>
 
@@ -91,15 +83,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+506 2291-9100</span>
+                <span className="text-gray-400">+506 8610 9613</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">info@facturacr.com</span>
+                <span className="text-gray-400">info@factico.net</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">San José, Costa Rica</span>
+                <span className="text-gray-400">Costa Rica</span>
               </li>
             </ul>
           </div>
@@ -107,7 +99,7 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; 2026 Factura CR. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Factico.net. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
               Política de Privacidad
