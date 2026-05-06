@@ -56,6 +56,12 @@ export default function HeroSection() {
                 </div>
                 <span className="text-gray-700">Disponible en web y dispositivos móviles</span>
               </div>
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-xs font-bold">✓</span>
+                </div>
+                <span className="text-gray-700">Borrador de declaración de IVA mensual</span>
+              </div>
             </div>
 
             {/* CTA Buttons */}
