@@ -56,6 +56,12 @@ export default function HeroSection() {
                 </div>
                 <span className="text-gray-700">Disponible en web y dispositivos móviles</span>
               </div>
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-xs font-bold">✓</span>
+                </div>
+                <span className="text-gray-700">Borrador de declaración de IVA mensual</span>
+              </div>
             </div>
 
             {/* CTA Buttons */}
@@ -66,7 +72,11 @@ export default function HeroSection() {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <a href="/login">
+              <a
+                href="https://go.screenpal.com/watch/cOhh0BntexM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   className="border-2 border-gray-300 text-gray-900 hover:bg-gray-50 px-8 py-6 text-lg rounded-lg"
