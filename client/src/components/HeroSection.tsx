@@ -66,7 +66,11 @@ export default function HeroSection() {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <a href="/login">
+              <a
+                href="https://go.screenpal.com/watch/cOhh0BntexM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   className="border-2 border-gray-300 text-gray-900 hover:bg-gray-50 px-8 py-6 text-lg rounded-lg"
