@@ -63,10 +63,11 @@ function getSmtpConfig():
     return { ok: false, reason: "SMTP no configurado" };
   }
   const port = Number(process.env.SMTP_PORT || "587");
+  /** 465 = SSL implícito (ZeptoMail y la mayoría de proveedores exigen `secure: true`). */
   const secure =
+    port === 465 ||
     process.env.SMTP_SECURE === "true" ||
-    process.env.SMTP_SECURE === "1" ||
-    port === 465;
+    process.env.SMTP_SECURE === "1";
   return { ok: true, config: { host, port, secure, user, pass } };
 }
 
@@ -85,9 +86,10 @@ async function sendSalesEmail(data: ContactSalesPayload): Promise<void> {
   });
 
   const to = (process.env.SALES_EMAIL_TO || "ventas@factico.net").trim();
-  const from =
-    (process.env.SMTP_FROM || user).trim() ||
-    `"Factico.net" <${user}>`;
+  const from = process.env.SMTP_FROM?.trim();
+  if (!from) {
+    throw new Error("SMTP_FROM no configurado");
+  }
 
   const mailResult = transporter.sendMail({
     from,
@@ -113,8 +115,13 @@ export async function handleContactSalesRequest(
     await sendSalesEmail(parsed.data);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    if (msg.includes("SMTP no configurado")) {
-      console.error("contact-sales: SMTP no configurado (variables SMTP_*)");
+    if (
+      msg.includes("SMTP no configurado") ||
+      msg.includes("SMTP_FROM no configurado")
+    ) {
+      console.error(
+        "contact-sales: SMTP incompleto (revisar SMTP_*, SMTP_FROM en ZeptoMail)"
+      );
       return {
         status: 503,
         body: { error: "El servicio de correo no está configurado." },
