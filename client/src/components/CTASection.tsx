@@ -7,6 +7,7 @@
  * - Botones destacados
  */
 
+import SalesContactDialog from "@/components/SalesContactDialog";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -33,14 +34,15 @@ export default function CTASection() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <a href="mailto:info@factico.net">
+            <SalesContactDialog>
               <Button
+                type="button"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-blue-600 px-8 py-6 text-lg rounded-lg font-semibold"
               >
                 Contactar Ventas
               </Button>
-            </a>
+            </SalesContactDialog>
           </div>
 
           {/* Trust Badges */}

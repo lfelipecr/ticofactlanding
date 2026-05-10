@@ -6,6 +6,8 @@ import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
+import { handleContactSalesRequest } from "./server/contact-sales-handler.ts";
+
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
 // Writes browser logs directly to files, trimmed when exceeding size limit
@@ -150,6 +152,54 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
+/** POST /api/contact-sales — mismo comportamiento que producción (SMTP vía env en desarrollo). */
+function vitePluginContactSalesApi(): Plugin {
+  return {
+    name: "contact-sales-api",
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use((req, res, next) => {
+        const pathname = req.url?.split("?")[0] ?? "";
+        if (pathname !== "/api/contact-sales" || req.method !== "POST") {
+          return next();
+        }
+
+        let body = "";
+        req.on("data", (chunk: Buffer) => {
+          body += chunk.toString();
+        });
+        req.on("end", () => {
+          void (async () => {
+            let json: unknown = {};
+            try {
+              json = body ? JSON.parse(body) : {};
+            } catch {
+              res.statusCode = 400;
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify({ error: "JSON inválido" }));
+              return;
+            }
+
+            try {
+              const result = await handleContactSalesRequest(json);
+              res.statusCode = result.status;
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify(result.body));
+            } catch {
+              res.statusCode = 500;
+              res.setHeader("Content-Type", "application/json");
+              res.end(
+                JSON.stringify({
+                  error: "Error interno al procesar la solicitud.",
+                })
+              );
+            }
+          })();
+        });
+      });
+    },
+  };
+}
+
 function vitePluginStorageProxy(): Plugin {
   return {
     name: "manus-storage-proxy",
@@ -203,7 +253,15 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+const plugins = [
+  vitePluginContactSalesApi(),
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  vitePluginManusRuntime(),
+  vitePluginManusDebugCollector(),
+  vitePluginStorageProxy(),
+];
 
 export default defineConfig({
   plugins,

@@ -3,12 +3,28 @@ import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import { handleContactSalesRequest } from "./contact-sales-handler.ts";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
   const server = createServer(app);
+
+  app.use(express.json({ limit: "64kb" }));
+
+  app.post("/api/contact-sales", async (req, res) => {
+    try {
+      const result = await handleContactSalesRequest(req.body);
+      res.status(result.status).json(result.body);
+    } catch (e) {
+      console.error("POST /api/contact-sales", e);
+      res.status(500).json({
+        error: "Error interno al procesar la solicitud.",
+      });
+    }
+  });
 
   // Serve static files from dist/public in production
   const staticPath =
