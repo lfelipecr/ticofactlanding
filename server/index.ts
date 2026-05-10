@@ -1,12 +1,17 @@
-import express from "express";
-import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+
+import { config as loadEnv } from "dotenv";
+import express from "express";
+import { createServer } from "http";
 
 import { handleContactSalesRequest } from "./contact-sales-handler.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+/** Local / Node propio: carga `.env` en la raíz del repo. En Vercel no aplica (env inyectado). */
+loadEnv({ path: path.resolve(__dirname, "../.env") });
 
 async function startServer() {
   const app = express();

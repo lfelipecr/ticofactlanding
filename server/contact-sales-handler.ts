@@ -1,17 +1,9 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-
-import { config as loadEnv } from "dotenv";
 import nodemailer from "nodemailer";
 
 import {
   type ContactSalesPayload,
   contactSalesSchema,
 } from "../shared/contact-sales.ts";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-/** Raíz del repo: `.env` sin prefijo VITE_ (Vite no inyecta estas vars en el middleware de Node). */
-loadEnv({ path: path.resolve(__dirname, "../.env") });
 
 export type ContactSalesHandlerResult =
   | { status: 200; body: { ok: true } }
@@ -97,7 +89,7 @@ async function sendSalesEmail(data: ContactSalesPayload): Promise<void> {
     (process.env.SMTP_FROM || user).trim() ||
     `"Factico.net" <${user}>`;
 
-  await transporter.sendMail({
+  const mailResult = transporter.sendMail({
     from,
     to,
     replyTo: data.email,
@@ -105,6 +97,7 @@ async function sendSalesEmail(data: ContactSalesPayload): Promise<void> {
     text: buildPlainText(data),
     html: buildHtml(data),
   });
+  await mailResult;
 }
 
 export async function handleContactSalesRequest(
