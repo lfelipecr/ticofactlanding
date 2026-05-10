@@ -24,19 +24,24 @@ async function getZohoAccessToken(): Promise<string> {
   const clientId = process.env.ZOHO_CLIENT_ID?.trim();
   const clientSecret = process.env.ZOHO_CLIENT_SECRET?.trim();
   const refreshToken = process.env.ZOHO_REFRESH_TOKEN?.trim();
-  const domain = (process.env.ZOHO_DOMAIN || "com").trim();
 
   if (!clientId || !clientSecret || !refreshToken) {
     throw new Error("Zoho no configurado (ZOHO_CLIENT_ID/SECRET/REFRESH_TOKEN)");
   }
 
-  const tokenUrl = new URL(`https://accounts.zoho.${domain}/oauth/v2/token`);
-  tokenUrl.searchParams.set("refresh_token", refreshToken);
-  tokenUrl.searchParams.set("client_id", clientId);
-  tokenUrl.searchParams.set("client_secret", clientSecret);
-  tokenUrl.searchParams.set("grant_type", "refresh_token");
+  const params = new URLSearchParams();
+  params.set("client_id", clientId);
+  params.set("client_secret", clientSecret);
+  params.set("refresh_token", refreshToken);
+  params.set("grant_type", "refresh_token");
 
-  const resp = await fetch(tokenUrl.toString(), { method: "POST" });
+  const resp = await fetch("https://accounts.zoho.com/oauth/v2/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    },
+    body: params.toString(),
+  });
   const json = (await resp.json().catch(() => ({}))) as {
     access_token?: string;
     expires_in?: number;
@@ -62,7 +67,6 @@ async function getZohoAccessToken(): Promise<string> {
 }
 
 async function sendToZohoLead(rawBody: unknown): Promise<void> {
-  const domain = (process.env.ZOHO_DOMAIN || "com").trim();
   const accessToken = await getZohoAccessToken();
 
   const bodyObj = asObject(rawBody);
@@ -79,8 +83,7 @@ async function sendToZohoLead(rawBody: unknown): Promise<void> {
     Lead_Source: "Landing Page Factico",
   };
 
-  const url = `https://www.zohoapis.${domain}/crm/v2/Leads`;
-  const resp = await fetch(url, {
+  const resp = await fetch("https://www.zohoapis.com/crm/v2/Leads", {
     method: "POST",
     headers: {
       Authorization: `Zoho-oauthtoken ${accessToken}`,
