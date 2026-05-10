@@ -77,11 +77,15 @@ async function sendToZohoLead(rawBody: unknown): Promise<void> {
     (typeof bodyObj.fullName === "string" && bodyObj.fullName.trim()) ||
     "Contacto Landing";
 
-  const leadPayload: JsonObject = {
-    ...bodyObj, // enviar TODOS los campos tal cual vienen
-    Last_Name: nameValue,
-    Lead_Source: "Landing Page Factico",
-  };
+    const leadPayload: JsonObject = {
+      // Nombres técnicos de Zoho CRM : Valores de tu formulario
+      Last_Name: bodyObj.fullName || nameValue, 
+      Company: bodyObj.companyName || "N/A",
+      Email: bodyObj.email,
+      Mobile: bodyObj.whatsapp,
+      Lead_Source: "Landing Page Factico",
+      Description: `Tipo de Negocio: ${bodyObj.businessType}\nMensaje: ${bodyObj.comments}`
+    };
 
   const resp = await fetch("https://www.zohoapis.com/crm/v2/Leads", {
     method: "POST",
