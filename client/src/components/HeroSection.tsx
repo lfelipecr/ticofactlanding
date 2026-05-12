@@ -66,7 +66,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="/signup">
+              <a href="https://login.factico.net/signup">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2">
                   Comenzar Ahora
                   <ArrowRight className="w-5 h-5" />
