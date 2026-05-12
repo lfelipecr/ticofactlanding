@@ -4,43 +4,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Factico.net | Factura Electrónica Fácil para Costa Rica</title>
-    <meta name="title" content="Factico.net | Factura Electrónica Fácil para Costa Rica" />
-    <meta name="description" content="Factico.net es la solución más sencilla para emitir facturas electrónicas conformes con el Ministerio de Hacienda de Costa Rica. Firma digital integrada, gestión automática y disponible en web y móvil. ₡6,950/mes con IVA incluido." />
-    <meta name="keywords" content="factura electrónica, costa rica, hacienda, comprobantes electrónicos, facturación digital, resolución 4.4" />
+
+    <!-- SEO Principal -->
+    <title>Factico.net | Factura Electrónica para Costa Rica</title>
+    <meta name="description" content="Factico.net es la solución más sencilla para emitir facturas electrónicas en Costa Rica. Cumple con el Ministerio de Hacienda. Desde ₡6,950/mes con IVA incluido. En el mercado desde 2017." />
+    <meta name="keywords" content="factura electrónica costa rica, facturación electrónica, hacienda costa rica, comprobantes electrónicos, facturar en costa rica, sistema de facturación, factico" />
     <meta name="author" content="Factico.net" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://factico.net/" />
-    
-    <!-- Open Graph / Facebook -->
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://factico.net/" />
-    <meta property="og:title" content="Factico.net | Factura Electrónica Fácil para Costa Rica" />
-    <meta property="og:description" content="Solución profesional de factura electrónica para Costa Rica. Cumple con Resolución 4.4 del Ministerio de Hacienda. Planes desde ₡6,950/mes." />
+    <meta property="og:title" content="Factico.net | Factura Electrónica para Costa Rica" />
+    <meta property="og:description" content="La solución más sencilla para emitir facturas electrónicas en Costa Rica. Cumple con Hacienda. Desde ₡6,950/mes con IVA incluido. En el mercado desde 2017." />
+    <meta property="og:image" content="https://factico.net/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Factico.net - Facturación Electrónica para Costa Rica" />
     <meta property="og:site_name" content="Factico.net" />
     <meta property="og:locale" content="es_CR" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://factico.net/" />
-    <meta property="twitter:title" content="Factico.net | Factura Electrónica Fácil para Costa Rica" />
-    <meta property="twitter:description" content="Solución profesional de factura electrónica para Costa Rica. Cumple con Resolución 4.4 del Ministerio de Hacienda." />
-    
-    <!-- Additional Meta Tags -->
-    <meta name="language" content="Spanish" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="distribution" content="global" />
-    
-    <!-- Preconnect to external resources -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://factico.net/" />
+    <meta name="twitter:title" content="Factico.net | Factura Electrónica para Costa Rica" />
+    <meta name="twitter:description" content="La solución más sencilla para emitir facturas electrónicas en Costa Rica. Cumple con Hacienda. Desde ₡6,950/mes con IVA incluido." />
+    <meta name="twitter:image" content="https://factico.net/logo.png" />
+
+    <!-- Schema.org JSON-LD (Google, ChatGPT, LLMs) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Factico.net",
+      "url": "https://factico.net",
+      "logo": "https://factico.net/logo.png",
+      "description": "Solución de facturación electrónica para Costa Rica, cumple con el Ministerio de Hacienda. En el mercado desde 2017.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "6950",
+        "priceCurrency": "CRC",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "6950",
+          "priceCurrency": "CRC",
+          "unitText": "mes"
+        }
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Factico.net",
+        "url": "https://factico.net",
+        "email": "info@factico.net",
+        "telephone": "+50686109613",
+        "foundingDate": "2017",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CR",
+          "addressRegion": "Costa Rica"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "100"
+      }
+    }
+    </script>
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
   </head>
 
   <body>
@@ -50,37 +88,6 @@
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
       data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-      
-    <!-- Schema.json for Google Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Factico.net",
-      "description": "Solución profesional de factura electrónica para Costa Rica",
-      "url": "https://factico.net",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "6950",
-        "priceCurrency": "CRC",
-        "description": "Plan Factico Basic - Facturación Electrónica Ilimitada"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Factico.net",
-        "url": "https://factico.net",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "telephone": "+506-8610-9613",
-          "email": "info@factico.net"
-        }
-      },
-      "areaServed": "CR",
-      "inLanguage": "es-CR"
-    }
-    </script>
   </body>
 
 </html>
