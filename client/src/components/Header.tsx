@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex gap-3">
-          <a href="/login">
+          <a href="https://login.factico.net/login">
             <Button className="bg-blue-600 hover:bg-blue-700">
               Acceder
             </Button>
@@ -113,7 +113,7 @@ export default function Header() {
               Contacto
             </button>
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-100">
-              <a href="/login" className="w-full">
+              <a href="https://login.factico.net/login" className="w-full">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700">
                   Acceder
                 </Button>
