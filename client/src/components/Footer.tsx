@@ -8,6 +8,7 @@
  */
 
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -100,16 +101,16 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>&copy; 2026 Factico.net. Todos los derechos reservados.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+          <div className="flex flex-wrap gap-6">
+            <Link href="/privacy" className="hover:text-white transition-colors">
               Política de Privacidad
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/terms" className="hover:text-white transition-colors">
               Términos de Servicio
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">
               Política de Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>

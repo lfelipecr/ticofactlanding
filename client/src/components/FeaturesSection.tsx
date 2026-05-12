@@ -8,38 +8,72 @@
  * - Iconografía minimalista
  */
 
-import { Cloud, Lock, Smartphone, FileText, Zap, BarChart3 } from "lucide-react";
+import {
+  Smartphone,
+  BarChart3,
+  Share2,
+  Mail,
+  Inbox,
+  HeadphonesIcon,
+  Building2,
+  Search,
+  FileCheck,
+} from "lucide-react";
 
 const features = [
   {
-    icon: Cloud,
-    title: "En la Nube",
-    description: "Accede desde cualquier dispositivo, en cualquier momento. Sin instalaciones complicadas.",
-  },
-  {
-    icon: Lock,
-    title: "Seguridad Garantizada",
-    description: "Firma digital integrada y encriptación de datos. Cumple con estándares internacionales.",
-  },
-  {
     icon: Smartphone,
-    title: "Móvil Optimizado",
-    description: "Interfaz responsiva diseñada para trabajar perfectamente en teléfonos y tablets.",
-  },
-  {
-    icon: FileText,
-    title: "Documentos XML y PDF",
-    description: "Genera automáticamente ambos formatos. Listo para enviar a clientes y Hacienda.",
-  },
-  {
-    icon: Zap,
-    title: "Integración Automática",
-    description: "Gestión automática ante el Ministerio de Hacienda. Sin trámites manuales.",
+    title: "Instálala como APP",
+    description:
+      "Factico.net es una PWA. Instálala en tu celular o computadora como si fuera una app nativa, sin pasar por tiendas de aplicaciones.",
   },
   {
     icon: BarChart3,
-    title: "Reportes y Análisis",
-    description: "Visualiza tus ventas, ingresos y documentos emitidos en tiempo real.",
+    title: "Reportes de IVA",
+    description:
+      "Genera reportes de IVA de ventas y compras listos para presentar tu declaración ante el Ministerio de Hacienda sin complicaciones.",
+  },
+  {
+    icon: Share2,
+    title: "Comparte tus Facturas",
+    description:
+      "Cada factura tiene un enlace único que puedes compartir directamente por WhatsApp o correo electrónico con tus clientes.",
+  },
+  {
+    icon: Mail,
+    title: "Envío y Reenvío por Correo",
+    description:
+      "Envía y reenvía comprobantes electrónicos directamente desde el sistema al correo de tus clientes con un solo clic.",
+  },
+  {
+    icon: Inbox,
+    title: "Recepción de Facturas de Compras",
+    description:
+      "Recibe y gestiona automáticamente las facturas de compras que te envían tus proveedores directamente desde tu correo.",
+  },
+  {
+    icon: HeadphonesIcon,
+    title: "Soporte Humano y Rápido",
+    description:
+      "Nuestro soporte es atendido por personas reales, no por bots. Respuestas rápidas y oportunas cuando más lo necesitas.",
+  },
+  {
+    icon: Building2,
+    title: "Múltiples Actividades Económicas",
+    description:
+      "Gestiona varias actividades económicas desde una sola cuenta, cada una con su propio logo personalizado.",
+  },
+  {
+    icon: Search,
+    title: "Búsqueda Automática de Clientes",
+    description:
+      "Al crear un cliente, el sistema busca automáticamente sus datos con solo ingresar su cédula o número de identificación.",
+  },
+  {
+    icon: FileCheck,
+    title: "Facturas con Exoneración",
+    description:
+      "Emite facturas electrónicas con exoneración de IVA de forma sencilla, cumpliendo con la normativa vigente de Hacienda.",
   },
 ];
 
