@@ -41,7 +41,7 @@ export default function PlansSection() {
               </div>
 
               {/* CTA Button */}
-              <a href="/signup" className="block">
+              <a href="https://login.factico.net/signup" className="block">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg font-semibold mb-6">
                   Comenzar Ahora
                 </Button>
