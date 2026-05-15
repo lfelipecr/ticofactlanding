@@ -22,7 +22,7 @@ export default function CTASection() {
               Comienza tu Facturación Electrónica Hoy
             </h2>
             <p className="text-xl text-blue-100">
-              Únete a más de 100 empresas y trabajadores independientes en Costa Rica que confían en Factico.net.
+              Únete a más de 100 empresas y trabajadores independientes en Costa Rica que confían en Fáctico.
             </p>
           </div>
 

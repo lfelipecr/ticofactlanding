@@ -32,7 +32,7 @@ export default function HeroSection() {
                 Factura Electrónica Fácil para Costa Rica
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Factico.net es la solución más sencilla para emitir facturas electrónicas conformes con el Ministerio de Hacienda. Desde cualquier dispositivo, sin complicaciones.
+                Fáctico es la solución más amigable para emitir facturas electrónicas conformes con el Ministerio de Hacienda. Desde cualquier dispositivo, sin complicaciones.
               </p>
             </div>
 
@@ -61,6 +61,12 @@ export default function HeroSection() {
                   <span className="text-white text-xs font-bold">✓</span>
                 </div>
                 <span className="text-gray-700">Borrador de declaración de IVA mensual</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-white text-xs font-bold">✓</span>
+                </div>
+                <span className="text-gray-700">Recepción de facturas de compra desde el correo</span>
               </div>
             </div>
 

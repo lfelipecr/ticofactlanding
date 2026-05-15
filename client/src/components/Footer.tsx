@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12 pb-12 border-b border-gray-800">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="font-bold text-white text-lg">Factico.net</h3>
+            <h3 className="font-bold text-white text-lg">Fáctico</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               La solución más simple para factura electrónica en Costa Rica. Desde 2017 ayudando a empresas y trabajadores independientes.
             </p>
@@ -105,7 +105,7 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; 2026 Factico.net. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Fáctico. Todos los derechos reservados.</p>
           <div className="flex flex-wrap gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Política de Privacidad

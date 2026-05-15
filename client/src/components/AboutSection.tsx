@@ -21,7 +21,7 @@ export default function AboutSection() {
                 Confianza y Experiencia
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Desde 2017, Factico.net ha ayudado a más de 100 empresas y trabajadores independientes en Costa Rica a cumplir con sus obligaciones de facturación electrónica de forma segura y eficiente.
+                Desde 2017, Fáctico ha ayudado a más de 100 empresas y trabajadores independientes en Costa Rica a cumplir con sus obligaciones de facturación electrónica de forma segura y eficiente.
               </p>
             </div>
 

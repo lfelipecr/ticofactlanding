@@ -25,7 +25,7 @@ const features = [
     icon: Smartphone,
     title: "Instálala como APP",
     description:
-      "Factico.net es una PWA. Instálala en tu celular o computadora como si fuera una app nativa, sin pasar por tiendas de aplicaciones.",
+      "Fáctico es una PWA. Instálala en tu celular o computadora como si fuera una app nativa, sin pasar por tiendas de aplicaciones.",
   },
   {
     icon: BarChart3,

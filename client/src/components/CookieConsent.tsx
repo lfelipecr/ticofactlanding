@@ -12,17 +12,12 @@ import { Cookie, X, ChevronDown, ChevronUp } from "lucide-react";
 const CONSENT_KEY = "factico_cookie_consent";
 
 export default function CookieConsent() {
+  // Banner desactivado: Zoho SalesIQ ya muestra su propio aviso de cookies
+  return null;
+
+  // eslint-disable-next-line no-unreachable
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem(CONSENT_KEY);
-    if (!consent) {
-      // Pequeño delay para no interrumpir la carga inicial
-      const timer = setTimeout(() => setVisible(true), 1500);
-      return () => clearTimeout(timer);
-    }
-  }, []);
 
   const handleAcceptAll = () => {
     localStorage.setItem(CONSENT_KEY, JSON.stringify({ accepted: true, date: new Date().toISOString() }));
