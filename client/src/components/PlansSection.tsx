@@ -30,7 +30,7 @@ export default function PlansSection() {
                 PLAN ÚNICO
               </div>
 
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">Factico Basic</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">Fáctico Basic</h3>
               <p className="text-gray-600 text-lg mb-6">La solución perfecta para trabajadores independientes y pequeños negocios</p>
 
               {/* Price */}

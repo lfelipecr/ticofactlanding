@@ -83,7 +83,7 @@ async function sendToZohoLead(rawBody: unknown): Promise<void> {
       Company: bodyObj.companyName || "N/A",
       Email: bodyObj.email,
       Mobile: bodyObj.whatsapp,
-      Lead_Source: "Landing Page Factico",
+      Lead_Source: "Landing Page Fáctico",
       Description: `Tipo de Negocio: ${bodyObj.businessType}\nMensaje: ${bodyObj.comments}`
     };
 

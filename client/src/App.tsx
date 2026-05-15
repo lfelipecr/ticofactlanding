@@ -9,6 +9,8 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import CookieConsent from "./components/CookieConsent";
+import FacticoAPI from "./pages/FacticoAPI";
+import FacticoPro from "./pages/FacticoPro";
 
 function Router() {
   return (
@@ -17,6 +19,8 @@ function Router() {
       <Route path={"/terms"} component={TermsAndConditions} />
       <Route path={"/privacy"} component={PrivacyPolicy} />
       <Route path={"/cookies"} component={CookiePolicy} />
+      <Route path={"/factico-api"} component={FacticoAPI} />
+      <Route path={"/factico-pro"} component={FacticoPro} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

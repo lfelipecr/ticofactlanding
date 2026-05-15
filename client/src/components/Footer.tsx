@@ -44,9 +44,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  API
-                </a>
+                <Link href="/factico-api" className="text-gray-400 hover:text-white transition-colors">
+                  Fáctico API
+                </Link>
+              </li>
+              <li>
+                <Link href="/factico-pro" className="text-gray-400 hover:text-white transition-colors">
+                  Fáctico PRO
+                </Link>
               </li>
             </ul>
           </div>
