@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SalesContactDialog from "@/components/SalesContactDialog";
+import { useSEO } from "@/hooks/useSEO";
 
 const features = [
   {
@@ -131,6 +132,18 @@ const useCases = [
 ];
 
 export default function FacticoAPI() {
+  useSEO({
+    title: "Fáctico API | API de Facturación Electrónica para Costa Rica",
+    description:
+      "API REST para facturación electrónica en Costa Rica. Genera la clave, crea XMLs, firma, envía a Hacienda y consulta el estado. Planes desde ₡3,500/mes. Ideal para freelancers, agencias y empresas.",
+    canonical: "https://factico.net/factico-api",
+    ogTitle: "Fáctico API — Facturación Electrónica como servicio",
+    ogDescription:
+      "Integra facturación electrónica en tu sistema sin complicaciones. El API se encarga de la firma digital, el envío a Hacienda y la consulta de estado. Planes desde ₡3,500/mes.",
+    keywords:
+      "api facturación electrónica costa rica, api hacienda costa rica, firma digital comprobantes, api factura electrónica, factico api",
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <Header />

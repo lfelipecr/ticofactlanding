@@ -30,6 +30,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SalesContactDialog from "@/components/SalesContactDialog";
+import { useSEO } from "@/hooks/useSEO";
 
 const modules = [
   {
@@ -145,6 +146,18 @@ const differentiators = [
 ];
 
 export default function FacticoPro() {
+  useSEO({
+    title: "Fáctico PRO | Software de Gestión para Pymes en Costa Rica",
+    description:
+      "Fáctico PRO es el sistema de gestión todo en uno para pymes costarricenses: inventario, contabilidad, nómina, RRHH, cotizaciones, órdenes de compra, bancos y más. 100% en la nube. Planes a la medida.",
+    canonical: "https://factico.net/factico-pro",
+    ogTitle: "Fáctico PRO — El control total de tu pyme, sin complicaciones",
+    ogDescription:
+      "Software de gestión para pymes costarricenses. Inventario, contabilidad, nómina, RRHH y más, todo integrado en la nube. No es un ERP: es fácil de usar y a la medida de tu negocio.",
+    keywords:
+      "software gestión pymes costa rica, sistema contable pymes, inventario pymes, nómina costa rica, software empresarial costa rica, factico pro",
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
