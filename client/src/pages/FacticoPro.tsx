@@ -89,6 +89,18 @@ const modules = [
   },
   {
     icon: BarChart3,
+    title: "Control de Cuentas por Pagar",
+    description:
+      "Gestiona tus deudas con proveedores, vencimientos, pagos y reportes de cuentas por pagar. Nunca más un pago olvidado.",
+  },
+  {
+    icon: BarChart3,
+    title: "Control de Cuentas por Cobrar",
+    description:
+      "Registra tus facturas emitidas, seguimiento de pagos, recordatorios de vencimiento y reportes de cuentas por cobrar en tiempo real.",
+  },
+  {
+    icon: BarChart3,
     title: "Reportería Avanzada",
     description:
       "Dashboards y reportes detallados de ventas, inventario, finanzas y más. Toma decisiones basadas en datos reales de tu negocio.",
