@@ -155,7 +155,7 @@ export default function FacticoAPI() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
-            <Link href="/" className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors text-sm mb-8">
+            <Link href="/" className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors text-sm mb-6 block">
               <ArrowLeft className="w-4 h-4" />
               Volver al inicio
             </Link>

@@ -181,7 +181,7 @@ export default function FacticoPro() {
             {/* Breadcrumb */}
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors text-sm mb-8"
+              className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors text-sm mb-6 block"
             >
               <ArrowLeft className="w-4 h-4" />
               Volver al inicio
