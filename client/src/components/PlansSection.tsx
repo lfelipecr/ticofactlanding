@@ -1,11 +1,12 @@
 /**
- * Plans Section Component - Versión Simplificada
- * Un solo plan simple
+ * Plans Section Component
+ * Tres planes: Pre-pago, Fáctico Basic (plan principal) y Personal (a la medida)
  * Diseño: Minimalismo Corporativo Moderno
  */
 
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import SalesContactDialog from "@/components/SalesContactDialog";
 
 export default function PlansSection() {
   return (
@@ -14,82 +15,143 @@ export default function PlansSection() {
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Plan Simple y Directo
+            Planes y Precios
           </h2>
           <p className="text-xl text-gray-600">
             Todo lo que necesitas para facturación electrónica profesional en Costa Rica.
           </p>
         </div>
 
-        {/* Single Plan Card */}
-        <div className="max-w-2xl mx-auto">
-          <div className="border-2 border-blue-600 rounded-lg overflow-hidden shadow-lg">
-            {/* Card Header */}
-            <div className="bg-gradient-to-r from-blue-50 to-white p-8">
-              <div className="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
-                PLAN ÚNICO
+        {/* Plans Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          {/* Plan Pre-pago */}
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+            <div className="bg-white p-8 flex flex-col flex-1">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Pre-pago</h3>
+              <p className="text-gray-600 mb-6">Ideal para volúmenes pequeños con pago único anual</p>
+
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-gray-900">₡11,300</span>
+                <span className="text-gray-600 ml-2">/año</span>
+                <p className="text-sm text-gray-500 mt-2">IVA incluido · 50 comprobantes</p>
               </div>
 
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">Fáctico Basic</h3>
-              <p className="text-gray-600 text-lg mb-6">La solución perfecta para trabajadores independientes y pequeños negocios</p>
+              <SalesContactDialog>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 py-6 text-base font-semibold mb-6">
+                  Solicitar acceso
+                </Button>
+              </SalesContactDialog>
 
-              {/* Price */}
+              <div className="space-y-3 mt-auto">
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Incluye:</p>
+                {[
+                  "50 comprobantes anuales",
+                  "Todos los tipos de comprobante",
+                  "Firma digital integrada y segura",
+                  "Envío automático al Ministerio de Hacienda",
+                  "Generación de PDF y XML",
+                  "Acceso desde web y dispositivos móviles",
+                  "Soporte técnico por correo",
+                ].map((f) => (
+                  <div key={f} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Plan Fáctico Basic — destacado */}
+          <div className="border-2 border-blue-600 rounded-lg overflow-hidden shadow-lg flex flex-col">
+            <div className="bg-gradient-to-r from-blue-50 to-white p-8 flex flex-col flex-1">
+              <div className="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 self-start">
+                MÁS POPULAR
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Fáctico Basic</h3>
+              <p className="text-gray-600 mb-6">La solución perfecta para trabajadores independientes y pequeños negocios</p>
+
               <div className="mb-6">
-                <span className="text-6xl font-bold text-gray-900">₡6,950</span>
+                <span className="text-5xl font-bold text-gray-900">₡6,950</span>
                 <span className="text-gray-600 ml-2">/mes</span>
                 <p className="text-sm text-gray-500 mt-2">IVA incluido</p>
               </div>
 
-              {/* CTA Button */}
-              <a href="https://login.factico.net/signup" className="block">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg font-semibold mb-6">
+              <a href="https://login.factico.net/signup" className="block mb-6">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-base font-semibold">
                   Comenzar Ahora
                 </Button>
               </a>
 
-              {/* Features List */}
-              <div className="space-y-4">
+              <div className="space-y-3 mt-auto">
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Incluye:</p>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
+                {[
+                  "Emisión ilimitada de facturas electrónicas",
+                  "Firma digital integrada y segura",
+                  "Envío automático al Ministerio de Hacienda",
+                  "Generación de PDF y XML",
+                  "Acceso desde web y dispositivos móviles",
+                  "Soporte técnico por correo",
+                  "Gestión de clientes y productos",
+                  "Recepción de facturas de compra desde el correo",
+                ].map((f) => (
+                  <div key={f} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Emisión ilimitada de facturas electrónicas</span>
+                    <span className="text-gray-700 text-sm">{f}</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Firma digital integrada y segura</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Envío automático al Ministerio de Hacienda</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Generación de PDF y XML</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Acceso desde web y dispositivos móviles</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Soporte técnico por correo</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Gestión de clientes y productos</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
+          </div>
 
-            {/* Card Footer */}
-            <div className="bg-gray-50 px-8 py-6 border-t border-gray-200">
-              <p className="text-gray-600 text-sm">
-                ¿Necesitas funcionalidades avanzadas? <a href="#contact" className="text-blue-600 font-semibold hover:underline">Contáctanos</a> para conocer nuestras otras soluciones de software.
-              </p>
+          {/* Plan Personal */}
+          <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
+            <div className="bg-white p-8 flex flex-col flex-1">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Personal</h3>
+              <p className="text-gray-600 mb-6">Define tu presupuesto y necesidades, nosotros hacemos una propuesta a tu medida</p>
+
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-gray-900">A tu medida</span>
+                <p className="text-sm text-gray-500 mt-2">Precio según tu necesidad</p>
+              </div>
+
+              <SalesContactDialog>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 py-6 text-base font-semibold mb-6">
+                  Pedir información
+                </Button>
+              </SalesContactDialog>
+
+              <div className="space-y-3 mt-auto">
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Incluye:</p>
+                {[
+                  "Comprobantes según tu volumen",
+                  "Todos los tipos de comprobante",
+                  "Firma digital integrada y segura",
+                  "Envío automático al Ministerio de Hacienda",
+                  "Generación de PDF y XML",
+                  "Acceso desde web y dispositivos móviles",
+                  "Soporte dedicado",
+                  "Propuesta ajustada a tu presupuesto",
+                ].map((f) => (
+                  <div key={f} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+
+        </div>
+
+        {/* Footer note */}
+        <div className="max-w-5xl mx-auto mt-8 text-center">
+          <p className="text-gray-500 text-sm">
+            ¿Necesitas funcionalidades avanzadas de gestión empresarial?{" "}
+            <a href="/factico-pro" className="text-blue-600 font-semibold hover:underline">Conoce Fáctico PRO</a>
+          </p>
         </div>
       </div>
     </section>

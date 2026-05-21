@@ -55,23 +55,6 @@ const features = [
 
 const plans = [
   {
-    name: "Pre-pago",
-    price: "₡11,300",
-    period: "/año",
-    comprobantes: "50 comprobantes",
-    description: "Perfecto para pequeños volúmenes con vencimiento anual",
-    highlight: false,
-    features: [
-      "50 comprobantes anuales",
-      "Todos los tipos de comprobante",
-      "Firma digital incluida",
-      "Envío automático a Hacienda",
-      "Consulta de estado",
-      "Soporte por correo",
-      "Distribución entre clientes",
-    ],
-  },
-  {
     name: "Starter",
     price: "₡3,500",
     period: "/mes",
@@ -106,24 +89,6 @@ const plans = [
       "Distribución entre clientes",
       "Mayor capacidad de procesamiento",
       "Pago anual: ahorrá 2 meses de mensualidad",
-    ],
-  },
-  {
-    name: "Personal",
-    price: "A tu medida",
-    period: "",
-    comprobantes: "Según tu necesidad",
-    description: "Define tu presupuesto, cantidad de documentos y nosotros hacemos una propuesta",
-    highlight: false,
-    features: [
-      "Comprobantes personalizados",
-      "Todos los tipos de comprobante",
-      "Firma digital incluida",
-      "Envío automático a Hacienda",
-      "Consulta de estado",
-      "Soporte dedicado",
-      "Distribución entre clientes",
-      "Propuesta ajustada a tu presupuesto",
     ],
   },
   {
