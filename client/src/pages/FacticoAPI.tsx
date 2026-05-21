@@ -299,7 +299,7 @@ export default function FacticoAPI() {
               Planes y Precios
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Un paquete de comprobantes lo puedes dividir entre varios clientes. Elige el plan que mejor se adapte a tu necesidad.
+              Un paquete de comprobantes lo puedes dividir entre varios clientes. Elige el plan que mejor se adapte a tu necesidad. Precios con IVA incluido.
             </p>
           </div>
 
