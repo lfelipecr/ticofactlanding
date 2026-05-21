@@ -4,6 +4,7 @@
  * Diseño: Minimalismo Corporativo Moderno
  */
 
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import SalesContactDialog from "@/components/SalesContactDialog";
@@ -150,7 +151,7 @@ export default function PlansSection() {
         <div className="max-w-5xl mx-auto mt-8 text-center">
           <p className="text-gray-500 text-sm">
             ¿Necesitas funcionalidades avanzadas de gestión empresarial?{" "}
-            <a href="/factico-pro" className="text-blue-600 font-semibold hover:underline">Conoce Fáctico PRO</a>
+            <Link href="/factico-pro" className="text-blue-600 font-semibold hover:underline">Conoce Fáctico PRO</Link>
           </p>
         </div>
       </div>
