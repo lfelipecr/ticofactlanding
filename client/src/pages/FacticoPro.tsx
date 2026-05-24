@@ -10,7 +10,7 @@ import { Link } from "wouter";
 import {
   ArrowLeft,
   Package,
-  BookOpen,
+  Globe,
   FileText,
   ShoppingCart,
   Users,
@@ -40,10 +40,10 @@ const modules = [
       "Controla tus productos, existencias y movimientos en tiempo real. Alertas de stock mínimo, trazabilidad por lote y ajustes de inventario sin complicaciones.",
   },
   {
-    icon: BookOpen,
-    title: "Módulo Contable",
+    icon: Globe,
+    title: "Página Web",
     description:
-      "Contabilidad integrada con tu operación diaria. Asientos automáticos, catálogo de cuentas configurable y estados financieros listos para tu contador.",
+      "Tu propio sitio web para vender tus productos en línea, integrado directamente con tu inventario y facturación electrónica.",
   },
   {
     icon: FileText,
