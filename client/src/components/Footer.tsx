@@ -53,6 +53,11 @@ export default function Footer() {
                   Fáctico PRO
                 </Link>
               </li>
+              <li>
+                <Link href="/factico-sites" className="text-gray-400 hover:text-white transition-colors">
+                  Fáctico Sites
+                </Link>
+              </li>
             </ul>
           </div>
 

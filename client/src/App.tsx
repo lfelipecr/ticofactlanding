@@ -12,6 +12,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import CookieConsent from "./components/CookieConsent";
 import FacticoAPI from "./pages/FacticoAPI";
 import FacticoPro from "./pages/FacticoPro";
+import FacticoSites from "./pages/FacticoSites";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -32,6 +33,7 @@ function Router() {
       <Route path={"/cookies"} component={CookiePolicy} />
       <Route path={"/factico-api"} component={FacticoAPI} />
       <Route path={"/factico-pro"} component={FacticoPro} />
+      <Route path={"/factico-sites"} component={FacticoSites} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
