@@ -7,12 +7,29 @@
  */
 
 import { Link } from "wouter";
-import { Check, Code2, FileText, Key, Send, Search, Shield, Users, Zap, ArrowLeft, Mail, Phone } from "lucide-react";
+import {
+  Check,
+  Code2,
+  FileText,
+  Key,
+  Send,
+  Search,
+  Shield,
+  Users,
+  Zap,
+  ArrowLeft,
+  Mail,
+  Phone,
+  BookOpen,
+  ExternalLink,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SalesContactDialog from "@/components/SalesContactDialog";
 import { useSEO } from "@/hooks/useSEO";
+
+const API_DOCS_URL = "https://lfelipecr.github.io/factico-api/api/";
 
 const features = [
   {
@@ -49,7 +66,8 @@ const features = [
     icon: Code2,
     title: "Integración Simple",
     description:
-      "API RESTful con documentación clara. Llama a unos pocos endpoints y el API hace todo el trabajo pesado por ti. Compatible con cualquier lenguaje o plataforma.",
+      "API RESTful con documentación Swagger interactiva. Llama a unos pocos endpoints y el API hace todo el trabajo pesado por ti. Compatible con cualquier lenguaje o plataforma.",
+    docsUrl: API_DOCS_URL,
   },
 ];
 
@@ -174,7 +192,7 @@ export default function FacticoAPI() {
               Genera la clave, crea los XMLs para cualquier tipo de comprobante, firma, envía a Hacienda y consulta el estado. Sin complicaciones.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <SalesContactDialog>
                 <Button className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-6 text-lg">
                   Solicitar Acceso
@@ -186,6 +204,20 @@ export default function FacticoAPI() {
                   className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg"
                 >
                   Ver Planes
+                </Button>
+              </a>
+              <a
+                href={API_DOCS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg gap-2"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Ver documentación
+                  <ExternalLink className="w-4 h-4 opacity-80" />
                 </Button>
               </a>
             </div>
@@ -203,9 +235,19 @@ export default function FacticoAPI() {
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Fáctico API es un servicio que te permite integrar facturación electrónica en tu aplicación, sitio web o sistema sin tener que preocuparte por los detalles técnicos de la firma digital o los protocolos de Hacienda. Nosotros nos encargamos de todo.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Es ideal para freelancers, agencias de software y empresas que desean ofrecer facturación electrónica a sus clientes sin complicarse con el desarrollo.
             </p>
+            <a
+              href={API_DOCS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 hover:underline"
+            >
+              <BookOpen className="w-5 h-5" />
+              Documentación de la API (Swagger)
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -219,6 +261,7 @@ export default function FacticoAPI() {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, idx) => {
               const Icon = feature.icon;
+              const docsUrl = "docsUrl" in feature ? feature.docsUrl : undefined;
               return (
                 <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -226,6 +269,17 @@ export default function FacticoAPI() {
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-700">{feature.description}</p>
+                  {docsUrl ? (
+                    <a
+                      href={docsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+                    >
+                      Ver documentación
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  ) : null}
                 </div>
               );
             })}
