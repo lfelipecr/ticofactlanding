@@ -29,11 +29,20 @@ export default function HeroSection() {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Factura Electrónica Fácil para Costa Rica
+                El Asistente Digital de su Empresa
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Fáctico es la solución más amigable para emitir facturas electrónicas conformes con el Ministerio de Hacienda. Desde cualquier dispositivo, sin complicaciones.
+                Fáctico le ayuda a emitir facturas electrónicas conformes con el Ministerio de Hacienda. Desde cualquier dispositivo, sin complicaciones.
               </p>
+            </div>
+
+            {/* Fático - Mobile */}
+            <div className="flex md:hidden justify-center">
+              <img
+                src="/fatico-saludando.png"
+                alt="Fático, el asistente digital de su empresa"
+                className="max-h-64 w-auto"
+              />
             </div>
 
             {/* Beneficios Rápidos */}
@@ -110,11 +119,11 @@ export default function HeroSection() {
           </div>
 
           {/* Lado Derecho - Imagen Hero */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex justify-center">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663539613072/fWasZptKLEPANgjTmMRdmf/hero-factura-electronica-g26CKu2BBPfhzXSYFqbFJj.webp"
-              alt="Facturación Electrónica en Acción"
-              className="rounded-2xl shadow-lg w-full h-auto"
+              src="/fatico-saludando.png"
+              alt="Fático, el asistente digital de su empresa"
+              className="max-h-[520px] w-auto"
             />
           </div>
         </div>

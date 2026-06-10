@@ -1,6 +1,6 @@
 /**
  * Plans Section Component
- * Tres planes: Pre-pago, Fáctico Basic (plan principal) y Personal (a la medida)
+ * Cuatro planes: Pre-pago, Fáctico Basic, WhatsApp y Personal (a la medida)
  * Diseño: Minimalismo Corporativo Moderno
  */
 
@@ -24,7 +24,7 @@ export default function PlansSection() {
         </div>
 
         {/* Plans Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
 
           {/* Plan Pre-pago */}
           <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
@@ -107,6 +107,48 @@ export default function PlansSection() {
             </div>
           </div>
 
+          {/* Plan WhatsApp */}
+          <div className="border-2 border-green-500 rounded-lg overflow-hidden shadow-lg flex flex-col">
+            <div className="bg-gradient-to-r from-green-50 to-white p-8 flex flex-col flex-1">
+              <div className="inline-block bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 self-start">
+                NUEVO
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Emisión desde WhatsApp</h3>
+              <p className="text-gray-600 mb-6">Facture directamente desde WhatsApp, sin abrir la aplicación</p>
+
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-gray-900">₡11,300</span>
+                <span className="text-gray-600 ml-2">/mes</span>
+                <p className="text-sm text-gray-500 mt-2">IVA incluido</p>
+              </div>
+
+              <a href="https://login.factico.net/signup" className="block mb-6">
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-base font-semibold">
+                  Comenzar Ahora
+                </Button>
+              </a>
+
+              <div className="space-y-3 mt-auto">
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Incluye:</p>
+                {[
+                  "Emisión de facturas desde WhatsApp",
+                  "Emisión ilimitada de facturas electrónicas",
+                  "Firma digital integrada y segura",
+                  "Envío automático al Ministerio de Hacienda",
+                  "Generación de PDF y XML",
+                  "Acceso desde web y dispositivos móviles",
+                  "Soporte técnico por correo",
+                ].map((f) => (
+                  <div key={f} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Plan Personal */}
           <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm flex flex-col">
             <div className="bg-white p-8 flex flex-col flex-1">
@@ -148,7 +190,7 @@ export default function PlansSection() {
         </div>
 
         {/* Footer note */}
-        <div className="max-w-5xl mx-auto mt-8 text-center">
+        <div className="max-w-7xl mx-auto mt-8 text-center">
           <p className="text-gray-500 text-sm">
             ¿Necesitas funcionalidades avanzadas de gestión empresarial?{" "}
             <Link href="/factico-pro" className="text-blue-600 font-semibold hover:underline">Conoce Fáctico PRO</Link>

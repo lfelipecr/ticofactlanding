@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-bold text-white text-lg">Fáctico</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              La solución más simple para factura electrónica en Costa Rica. Desde 2017 ayudando a empresas y trabajadores independientes.
+              El Asistente Digital de su Empresa. Desde 2017 ayudando a empresas y trabajadores independientes en Costa Rica.
             </p>
           </div>
 

@@ -68,7 +68,7 @@ export default function AboutSection() {
             <div className="bg-white rounded-lg p-8 border border-gray-200">
               <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Nuestro Compromiso</h4>
               <p className="text-gray-700 leading-relaxed">
-                Proporcionar la solución más simple y confiable para facturación electrónica en Costa Rica. Tu éxito es nuestro éxito.
+                Ser el asistente digital más confiable para su empresa en Costa Rica. Tu éxito es nuestro éxito.
               </p>
             </div>
           </div>

@@ -28,8 +28,8 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663539613072/SgpIsLtXZCiWhrKz.png"
-            alt="Fáctico"
+            src="/logo.png"
+            alt="Fáctico — El Asistente Digital de su Empresa"
             className="h-10 w-auto"
           />
         </div>
